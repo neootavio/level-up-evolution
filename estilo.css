@@ -74,7 +74,7 @@ ul li {
   }
 
 ul li:hover {
-    background: #456BC7;
+    background: #456cc732;
     border-radius: 20px;
 }
   
@@ -100,10 +100,12 @@ ul li.checked::before {
 }
 
 .bg-video{
-    position: absolute;
+    
     right: 0;
     bottom: 0;
 
+    position: absolute;
+    
     min-width: 100%;
     min-height: 100%;
 
