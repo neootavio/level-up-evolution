@@ -15,6 +15,100 @@ body{
     #456BC7
 
     */
+    background-image: linear-gradient(#456BC7, #4F7AE0);
 
-    background-color: #223561;
+    background-repeat: no-repeat;
+
+    color: white;
+
+    border-radius: 20px;
+
+    box-sizing: border-box;
+
+    margin: auto;
+
+    line-height: 2em;
+    
+}
+
+strong{
+   
+    color: rgba(255, 42, 0, 0.921);
+    
+}
+
+h1{
+    text-align: center;
+
+    background-color: rgba(255, 255, 255, 0.123);
+}
+
+section{
+    
+    text-align: center;
+    
+}
+
+h2{
+    text-align: center;
+}
+
+h3{
+    text-align: left;
+}
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    font-size: 18px;
+    transition: 0.2s;
+  
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+ul li:hover {
+    background: #456BC7;
+    border-radius: 20px;
+}
+  
+  /* When clicked on, add a background color and strike out text */
+ul li.checked {
+    background: #6500E0;
+    color: #fff;
+    text-decoration: line-through;
+  }
+  
+  /* Add a "checked" mark when clicked on */
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+.bg_video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    min-width: 100%;
+    min-height: 100%;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: -100;
+
+
 }
