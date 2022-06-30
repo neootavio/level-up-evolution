@@ -17,6 +17,10 @@ body{
     */
     background-image: linear-gradient(#456BC7, #4F7AE0);
 
+    margin: 0;
+
+    padding: 0;
+
     background-repeat: no-repeat;
 
     color: white;
@@ -24,8 +28,6 @@ body{
     border-radius: 20px;
 
     box-sizing: border-box;
-
-    margin: auto;
 
     line-height: 2em;
     
@@ -97,18 +99,21 @@ ul li.checked::before {
     width: 7px;
 }
 
-.bg_video{
-    position: absolute;
+.bg-video{
+    position: fixed;
     right: 0;
     bottom: 0;
 
     min-width: 100%;
     min-height: 100%;
 
-    width: 100%;
+    width: auto;
     height: 100%;
 
-    z-index: -100;
+    z-index: -1000;
 
+    
+
+    background-size: cover;
 
 }
