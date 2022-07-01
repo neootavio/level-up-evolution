@@ -6,6 +6,6 @@ function alerta(){
 
 function cronometro(){
 
-    var cronometro = 
+    document.body.innerHTML = "";
 
 }
