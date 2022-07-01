@@ -34,9 +34,21 @@ body{
 }
 
 button{
-    width: 100%;
-    border: none;
-    background-color: #6500E0;
+    cursor: pointer;
+    outline: none;
+    padding: 20px 28px;
+    border-radius: 18px;
+    background: none;
+    transition: box-shadow 0.1s;
+    color: #0a99e1;
+    border: 4px solid #1d1f20;
+}
+
+button:hover{
+    border: 4px solid #0a99e1;
+    color: #456BC7;
+    box-shadow: 0px 0px 35px #0a99e1 , 0px 0px 15px #0a99e1 inset;
+    text-shadow: 0px 0px #0a99e1, 0px 0px 3px #0a99e1;
 }
 
 
