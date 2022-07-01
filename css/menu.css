@@ -37,7 +37,7 @@ ul {
 li:hover{
     box-shadow: 0px 0px 35px #0a99e1 , 0px 0px 15px #0a99e1 inset;
     text-shadow: 0px 0px #0a99e1, 0px 0px 3px #0a99e1;
-    border-radius: 10px;
+    border-radius: 40px;
 }
   
 a {
