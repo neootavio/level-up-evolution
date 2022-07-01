@@ -26,7 +26,17 @@ body{
     background-color: #1d1f20;
     font-family: 'Roboto Condensed', sans-serif;
     color: #fff;
+    height: 100vh;
+    display: flex;
+
+    flex-direction: column;
     
+}
+
+button{
+    width: 100%;
+    border: none;
+    background-color: #6500E0;
 }
 
 
