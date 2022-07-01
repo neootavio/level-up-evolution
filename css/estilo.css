@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300);
+
 body{
     /*Paleta de cores
     Violeta
@@ -15,16 +17,8 @@ body{
     #456BC7
 
     */
-    font-family: Arial, Helvetica, sans-serif;
-
-    margin: 0px;
-    padding: 0%;
-
-    background: black;
-
-    padding: 0;
-
-    color: white;
+    background-color: #1d1f20;
+  font-family: 'Roboto Condensed', sans-serif;
     
 }
 
@@ -93,22 +87,4 @@ ul li.checked::before {
     transform: rotate(45deg);
     height: 15px;
     width: 7px;
-}
-
-.bg-video{
-    
-    margin: 0;
-    padding: 0;
-    
-
-    position: fixed;
-
-    min-width: fit-content;
-    min-height: fit-content;
-
-    width: auto;
-    height: auto;
-
-    z-index: -1000;
-
 }
