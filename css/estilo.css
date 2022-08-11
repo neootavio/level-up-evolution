@@ -15,16 +15,14 @@ body {
   background-size: cover;*/
 }
 
-header {
+header > h1{
+  display: block;
+  margin: auto;
   background-color: darken(#1d1f20, 2%);
-  border-radius: 90px;
+  border-radius: 10px;
   box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.05), inset 1px 1px 1px rgba(0, 0, 0, 0.3);
-  left: 50%;
-  max-width: 800px;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
   width: 100%;
+  padding: 10px;
 }
 
 nav {
@@ -38,6 +36,9 @@ nav {
 }
 
 button {
+  display: flexbox;
+  text-align: center;
+  margin: auto;
   cursor: pointer;
   outline: none;
   padding: 20px 28px;
@@ -46,7 +47,7 @@ button {
   transition: box-shadow 0.1s;
   color: #0a99e1;
   border: 4px solid #1d1f20;
-  text-align: center;
+  
 }
 
 button:hover {
@@ -56,6 +57,15 @@ button:hover {
   text-shadow: 0px 0px #0a99e1, 0px 0px 3px #0a99e1;
 }
 
+.tempo{
+  border: 1px solid #0a99e1;
+  color: #456BC7;
+  box-shadow: 0px 0px 35px #0a99e1, 0px 0px 15px #0a99e1 inset;
+  text-shadow: 0px 0px #0a99e1, 0px 0px 3px #0a99e1;
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+}
 
 strong {
 
@@ -64,7 +74,7 @@ strong {
 }
 
 
-h1 {
+h1, #playlist {
 
   text-align: center;
 
@@ -75,7 +85,7 @@ h1 {
   
 }
 
-h2, h3{
+h2, h3, #btnCrono{
   text-align: center;
 }
 
@@ -148,7 +158,6 @@ a {
 .container{
   display: block;
   justify-items: center;
-  background-color: red;
   padding: 5px;
   width: 100%;
   height: 90vh;
@@ -158,38 +167,7 @@ a {
   text-align: center;
 }
 
-#playlist{
-  margin: auto;
-  text-align: center;
-  background-color: #889399;
-  width: 10%;
-  padding: 20px;  
+#myUL{
+  display: inline-block;
+  vertical-align: middle;
 }
-
-#cronometro{
-  
-  background-color: #0a99e1;
-  width: 30%;
-  height: 30vh;
-  
-  
-
-
-}
-
-#status{
-  
-  background-color: #456BC7;
-  width: 10%;
-  justify-items: space-around;
-  
-  
-}
-
-#quest{
-  
-  background-color: #6500E0;
-  width: 10%
-}
-
-
