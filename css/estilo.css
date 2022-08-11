@@ -10,8 +10,9 @@ body {
   background-color: #1d1f20;
   font-family: 'Roboto Condensed', sans-serif;
   color: #fff;
-  background-image: url(/assets/bluevegeta.jpg);
+ /* background-image: url("../assets/fundo2.jpg");
   background-repeat: no-repeat;
+  background-size: cover;*/
 }
 
 header {
@@ -27,11 +28,13 @@ header {
 }
 
 nav {
+  display: block;
+  width: 100%;
   border-radius: 2px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-  margin: 0;
+  margin: auto;
   align-items: center;
-  position: fixed;
+  z-index: +1000;
 }
 
 button {
@@ -60,11 +63,6 @@ strong {
 
 }
 
-section {
-
-  text-align: center;
-
-}
 
 h1 {
 
@@ -77,13 +75,10 @@ h1 {
   
 }
 
-h2 {
+h2, h3{
   text-align: center;
 }
 
-h3 {
-  text-align: center;
-}
 
 ul li {
   cursor: pointer;
@@ -149,3 +144,52 @@ a {
   text-decoration: none;
   transition: all 100ms ease-out;
 }
+
+.container{
+  display: block;
+  justify-items: center;
+  background-color: red;
+  padding: 5px;
+  width: 100%;
+  height: 90vh;
+}
+
+#video{
+  text-align: center;
+}
+
+#playlist{
+  margin: auto;
+  text-align: center;
+  background-color: #889399;
+  width: 10%;
+  padding: 20px;  
+}
+
+#cronometro{
+  
+  background-color: #0a99e1;
+  width: 30%;
+  height: 30vh;
+  
+  
+
+
+}
+
+#status{
+  
+  background-color: #456BC7;
+  width: 10%;
+  justify-items: space-around;
+  
+  
+}
+
+#quest{
+  
+  background-color: #6500E0;
+  width: 10%
+}
+
+
