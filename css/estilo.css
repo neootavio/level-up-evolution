@@ -3,10 +3,10 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
+
   background-color: #1d1f20;
   font-family: 'Roboto Condensed', sans-serif;
   color: #fff;
@@ -57,6 +57,9 @@ button:hover {
 }
 
 .tempo{
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
   border: 1px solid #0a99e1;
   color: #456BC7;
   box-shadow: 0px 0px 35px #0a99e1, 0px 0px 15px #0a99e1 inset;
@@ -67,21 +70,16 @@ button:hover {
 }
 
 strong {
-
   color: rgba(255, 42, 0, 0.921);
-
 }
 
 
 h1 {
-
   text-align: center;
 
   background-color: rgba(255, 255, 255, 0.042);
 
-  margin: 10px;
-
-  
+  margin: 10px; 
 }
 
 h2, h3, #btnCrono{
@@ -107,9 +105,18 @@ ul li {
   user-select: none;
 }
 
+ul .liquest, .liquest{
+  display: grid;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  box-shadow: 0px 0px 35px #0a99e132, 0px 0px 2px #0a99e1 inset;
+  padding: 21px;
+  margin: auto;
+}
+
 ul li:hover {
   background: rgba(255, 255, 255, 0.042);
-  border-radius: 1px;
+  border-radius: 2px;
 }
 
 /* When clicked on, add a background color and strike out text */
@@ -123,7 +130,7 @@ ul li.checked {
 ul li.checked::before {
   content: '';
   position: absolute;
-  border-color: #fff;
+  border-color: rgb(194, 26, 26);
   border-style: solid;
   border-width: 0 2px 2px 0;
   top: 10px;
@@ -159,39 +166,8 @@ a {
 }
 
 .container{
-  display: block;
+  align-items: center;
+  display: inline;
   justify-items: center;
-  padding: 5px;
-  width: 100%;
-  height: 150px;
-}
 
-#video{
-  text-align: center;
-}
-
-#myUL{
-  display: block;
-  margin: auto;
-  padding: 10px;
-  text-align: center;
-
-}
-
-#status{
-  margin: 0;
-  padding: 0;
-}
-
-#quest{
-  
-}
-
-#cronometro{
-  box-sizing: border-box;
-  position: relative;
-  text-align: center;
-  padding: 10px;
-  margin: auto;
-  z-index: 1000;
 }
