@@ -27,6 +27,7 @@ header > h1{
 }
 
 nav {
+  text-transform: capitalize;
   display: block;
   width: 100%;
   border-radius: 2px;
@@ -57,23 +58,6 @@ button:hover {
   text-shadow: 0px 0px #0a99e1, 0px 0px 3px #0a99e1;
 }
 
-.tempo{
-  width: 92%;
-  margin: auto;
-  display: flexbox;
-  box-sizing: border-box;
-  border: 1px solid #0a99e1;
-  color: #456BC7;
-  box-shadow: 0px 0px 15px #0a99e1, 0px 0px 1px #0a99e1 inset;
-  text-shadow: 0px 0px #0a99e1, 0px 0px 3px #0a99e1;
-  text-align: center;
-  padding: 5px;
-  margin: 21px;
-}
-.tempo:hover{
-  box-shadow: 0px 0px 35px #0a99e1, 0px 0px 15px #0a99e1 inset;
-  text-shadow: 0px 0px #0a99e1, 0px 0px 3px #0a99e1;
-}
 strong {
   color: rgba(255, 42, 0, 0.921);
 }
@@ -97,10 +81,11 @@ ul li {
   cursor: pointer;
   position: relative;
   display: inline-block;
-  padding: 0;
+  border-radius: 2px;
+  padding: 15px;
   margin: auto;
   text-align: center;
-  font-size: 2em;
+  font-size: 1em;
   transition: 0.2s;
 
   /* make the list items unselectable */
@@ -110,14 +95,31 @@ ul li {
   user-select: none;
 }
 
+.tempo{
+  width: 92%;
+  margin: auto;
+  display: grid;
+  box-sizing: border-box;
+  border: 1px solid #0a99e1;
+  color: #456BC7;
+  box-shadow: 0px 0px 15px #0a99e1, 0px 0px 1px #0a99e1 inset;
+  text-shadow: 0px 0px #0a99e1, 0px 0px 3px #0a99e1;
+  text-align: center;
+  padding: 25px;
+  font-size: 2em;
+}
+
 ul .liquest, .liquest{
-  width: 80%;
+  box-sizing: border-box;
+  width: 92%;
+  margin: auto;
   display: grid;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 2px;
   box-shadow: 0px 0px 35px #0a99e132, 0px 0px 2px #0a99e1 inset;
   padding: 21px;
-  margin: auto;
+  text-align: center;
+ 
 }
 
 ul li:hover {
