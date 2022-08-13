@@ -10,7 +10,7 @@ body {
   background-color: #1d1f20;
   font-family: 'Roboto Condensed', sans-serif;
   color: #fff;
- /* background-image: url("../assets/fundo2.jpg");
+  /*background-image: url("../assets/.jpg");
   background-repeat: no-repeat;
   background-size: cover;*/
 }
@@ -166,8 +166,9 @@ a {
 }
 
 .container{
-  align-items: center;
+  
   display: inline;
-  justify-items: center;
+
+  
 
 }
