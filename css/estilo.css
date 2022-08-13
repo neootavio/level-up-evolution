@@ -160,6 +160,9 @@ a {
 
 }
 
+input, .checkbox-wrapper{
+  display: inline-block;
+}
 
 input:checked + .checkbox-wrapper{
   text-decoration: line-through;
