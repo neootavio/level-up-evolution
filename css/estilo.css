@@ -58,19 +58,22 @@ button:hover {
 }
 
 .tempo{
-  width: 80%;
+  width: 92%;
   margin: auto;
-  display: inline-block;
+  display: flexbox;
   box-sizing: border-box;
   border: 1px solid #0a99e1;
   color: #456BC7;
-  box-shadow: 0px 0px 35px #0a99e1, 0px 0px 15px #0a99e1 inset;
+  box-shadow: 0px 0px 15px #0a99e1, 0px 0px 1px #0a99e1 inset;
   text-shadow: 0px 0px #0a99e1, 0px 0px 3px #0a99e1;
   text-align: center;
-  padding: 20px;
-  margin: 20px;
+  padding: 5px;
+  margin: 21px;
 }
-
+.tempo:hover{
+  box-shadow: 0px 0px 35px #0a99e1, 0px 0px 15px #0a99e1 inset;
+  text-shadow: 0px 0px #0a99e1, 0px 0px 3px #0a99e1;
+}
 strong {
   color: rgba(255, 42, 0, 0.921);
 }
@@ -122,39 +125,15 @@ ul li:hover {
   border-radius: 2px;
 }
 
-/* When clicked on, add a background color and strike out text */
-ul li.checked {
-  background: #6500E0;
-  color: #fff;
-  text-decoration: line-through;
-}
-
-/* Add a "checked" mark when clicked on */
-ul li.checked::before {
-  content: '';
-  position: absolute;
-  border-color: rgb(194, 26, 26);
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
-}
-
 ul {
-  display: flex;
-  list-style: none;
   margin: 0;
   padding: 0;
   align-items: center;
 }
 
-li:hover {
+li:hover, .tempo:hover{
   box-shadow: 0px 0px 35px #0a99e1, 0px 0px 15px #0a99e1 inset;
   text-shadow: 0px 0px #0a99e1, 0px 0px 3px #0a99e1;
-  border-radius: 15px;
 }
 
 a {
@@ -170,15 +149,17 @@ a {
 
 .container{
 
-  display: block;
-  
-  display: grid;
-  
-  width: 100%;
+  display: flexbox;
 
   margin: auto;
 
   text-align: center;
   
 
+}
+
+
+input:checked + .checkbox-wrapper{
+  text-decoration: line-through;
+  color: rgba(255, 0, 0, 0.97);
 }

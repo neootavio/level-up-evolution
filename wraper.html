@@ -5,9 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkbox wraper</title>
+    <style>
+
+        input.checkbox-wrapper{
+            display: inline;
+        }
+
+        input:checked + .checkbox-wrapper p {
+            color: blue;
+            font-size: 2em;
+        }
+
+        input:checked + .checkbox-wrapper{
+            text-decoration: line-through;
+        }
+    </style>
 </head>
 <body>
-    
+    <input type="checkbox" id="item">
+    <div class="checkbox-wrapper">
+        <label for="item">Ativar Item 1</label>
+        
+    </div>
     
 </body>
 </html>

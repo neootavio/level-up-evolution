@@ -22,22 +22,99 @@
 
   <div class="tempo">
 
-    <div id="status">
-      <iframe src="status.html" width="100%" height="146px" frameborder="0" scrolling="no"></iframe>
+    <div class="tempo">
+      <a href="status.html">
+        <img id="playerFoto" width="50px" src="assets/miles.jpg" alt="avatar"><br>
+        <span id="player">Player</span>
+        <strong id="level">Level: 1</strong>
+      </a>
     </div>
 
-    <div id="container">
-      <iframe src="cronometro.html" frameborder="0" scrolling="no" width="100%"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
+    <div class="tempo">
+      <p>
+        <span class="minutos">00</span>:
+        <span class="segundos">00</span>:
+        <span class="milissegundos">00</span>
+      </p>
+      <div id="btnCrono">
+        <button onclick="iniciar()" class="iniciar">Iniciar</button>
+        <button onclick="parar()" class="parar">Parar</button>
+        <button onclick="resetar()" class="resetar">Resetar</button>
+      </div>
     </div>
 
-    <div class="container">
-      <iframe src="quest.html" width="100%" height="450px" frameborder="0" scrolling="no"></iframe>
-    </div>
-  </div>
+    <div>
 
-  <script src="./js/levelup.js"></script>
+      <ul>
+        <li class="liquest">
+          <h2>Flexões</h2> <br>
+          <input type="checkbox" id="serie1">
+          <div class="checkbox-wrapper">
+            <label for="serie1">Serie 1</label><br>
+          </div>
+          <input type="checkbox" id="serie2">
+          <div class="checkbox-wrapper">
+            <label for="serie2">Serie 2</label><br>
+          </div>
+          <input type="checkbox" id="serie3">
+          <div class="checkbox-wrapper">
+            <label for="serie3">Serie 2</label><br>
+          </div>
+          
+          
+        </li>
+        <li class="liquest">
+          <h2>Abdominais</h2><br>
+          <input type="checkbox" id="serie1">
+          <div class="checkbox-wrapper">
+            <label for="serie1">Serie 1</label><br>
+          </div>
+          <input type="checkbox" id="serie2">
+          <div class="checkbox-wrapper">
+            <label for="serie2">Serie 2</label><br>
+          </div>
+          <input type="checkbox" id="serie3">
+          <div class="checkbox-wrapper">
+            <label for="serie3">Serie 2</label><br>
+          </div>
+        </li>
+        <li class="liquest">
+          <h2>Agachamentos</h2><br>
+          <input type="checkbox" id="serie1">
+          <div class="checkbox-wrapper">
+            <label for="serie1">Serie 1</label><br>
+          </div>
+          <input type="checkbox" id="serie2">
+          <div class="checkbox-wrapper">
+            <label for="serie2">Serie 2</label><br>
+          </div>
+          <input type="checkbox" id="serie3">
+          <div class="checkbox-wrapper">
+            <label for="serie3">Serie 2</label><br>
+          </div>
+        </li>
+        <li class="liquest">
+          <h2>Corrida</h2><br>
+          <input type="checkbox" id="serie1">
+          <div class="checkbox-wrapper">
+            <label for="serie1">Serie 1</label><br>
+          </div>
+          <input type="checkbox" id="serie2">
+          <div class="checkbox-wrapper">
+            <label for="serie2">Serie 2</label><br>
+          </div>
+          <input type="checkbox" id="serie3">
+          <div class="checkbox-wrapper">
+            <label for="serie3">Serie 2</label><br>
+          </div>
+        </li>
+
+      </ul>
+
+      </section>
+
+      <script src="./js/levelup.js"></script>
+      <script src="./js/cronometro.js"></script>
 </body>
 
 </html>
