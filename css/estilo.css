@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -42,7 +43,7 @@ button {
   cursor: pointer;
   outline: none;
   padding: 12px 21px;
-  border-radius: 18px;
+  border-radius: 21%;
   background: none;
   transition: box-shadow 0.1s;
   color: #0a99e1;
@@ -57,7 +58,8 @@ button:hover {
 }
 
 .tempo{
-  width: 100%;
+  width: 80%;
+  margin: auto;
   display: inline-block;
   box-sizing: border-box;
   border: 1px solid #0a99e1;
@@ -106,6 +108,7 @@ ul li {
 }
 
 ul .liquest, .liquest{
+  width: 80%;
   display: grid;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 2px;
@@ -166,9 +169,16 @@ a {
 }
 
 .container{
-  
-  display: inline;
 
+  display: block;
+  
+  display: grid;
+  
+  width: 100%;
+
+  margin: auto;
+
+  text-align: center;
   
 
 }
