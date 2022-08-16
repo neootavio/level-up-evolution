@@ -168,3 +168,7 @@ input:checked + .checkbox-wrapper{
   text-decoration: line-through;
   color: rgba(255, 0, 0, 0.97);
 }
+
+.redondo{
+  border-radius: 50%;
+}
