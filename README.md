@@ -1,7 +1,7 @@
 # level-up-evolution
 projeto Level Up
 
-versão 0.02 publicada em 16/08/2022
+versão 0.03 publicada em 16/08/2022
 
 /*Paleta de cores
     Violeta
