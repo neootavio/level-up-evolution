@@ -161,7 +161,7 @@ a {
 }
 
 input, .checkbox-wrapper{
-  display: inline-block;
+  display: grid;
 }
 
 input:checked + .checkbox-wrapper{
@@ -171,4 +171,8 @@ input:checked + .checkbox-wrapper{
 
 .redondo{
   border-radius: 50%;
+}
+
+.escondido{
+  display: none;
 }
