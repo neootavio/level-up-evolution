@@ -178,9 +178,6 @@ input:checked + .checkbox-wrapper{
 }
 
 .mostrar{
-  display: grid;
-}
-
-.comecar:checked{
-  display: grid;
+  transition: 5s;
+  display: block;
 }

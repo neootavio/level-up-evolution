@@ -12,7 +12,7 @@
 
 <body>
 
-  <nav class="tempo">
+  <nav id="menu1" class="tempo escondido">
     <ul>
       <li><a href="instruções.html">Instruções</a></li>
       <li><a href="status.html">Status</a></li>
@@ -20,14 +20,22 @@
     </ul>
   </nav>
 
-    <div class="tempo">
-      <a href="status.html">
-        <img id="playerFoto" width="50px" src="assets/miles.jpg" alt="avatar"><br>
-        <span id="player">Player</span>
-        <strong id="level">Level: 1</strong>
-      </a>
-    </div>
+  <div class="tempo">
+    <a href="status.html">
+      <img id="playerFoto" width="50px" src="assets/miles.jpg" alt="avatar"><br>
+      <span id="player">Player</span>
+      <strong id="level">Level: 1</strong>
+    </a>
+  </div>
 
+  <div class="tempo" id="painel1">
+    <button id="botao1" onclick="comecar()">Começar</button>
+  </div>
+
+
+
+
+  <main id="tela" class="escondido">
     <div class="tempo">
       <p>
         <span class="minutos">00</span>:
@@ -40,82 +48,81 @@
         <button onclick="resetar()" class="resetar">Resetar</button>
       </div>
     </div>
-
     <div class="tempo">
-      <iframe class="liquest" width="560" height="315" src="https://www.youtube.com/embed/bPvC2dbNvPY?start=14" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="liquest" width="560" height="315" src="https://www.youtube.com/embed/bPvC2dbNvPY?start=14"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
     </div>
-
-  
-        <ul>
-          <li class="tempo">
-            <p>Flexões</p> <br>
-            <input class="escondido" type="checkbox" id="serie1">
-            <div class="checkbox-wrapper">
-              <label for="serie1">Serie 1</label><br>
-            </div>
-            <input class="escondido" type="checkbox" id="serie2">
-            <div class="checkbox-wrapper">
-              <label for="serie2">Serie 2</label><br>
-            </div>
-            <input class="escondido" type="checkbox" id="serie3">
-            <div class="checkbox-wrapper">
-              <label for="serie3">Serie 3</label><br>
-            </div>
-  
-  
-          </li>
-          <li class="tempo">
-            <p>Abdominais</p><br>
-            <input class="escondido" type="checkbox" id="serie1">
-            <div class="checkbox-wrapper">
-              <label for="serie1">Serie 1</label><br>
-            </div>
-            <input class="escondido" type="checkbox" id="serie2">
-            <div class="checkbox-wrapper">
-              <label for="serie2">Serie 2</label><br>
-            </div>
-            <input class="escondido" type="checkbox" id="serie3">
-            <div class="checkbox-wrapper">
-              <label for="serie3">Serie 3</label><br>
-            </div>
-          </li>
-          <li class="tempo">
-            <p>Agachamentos</p><br>
-            <input class="escondido" type="checkbox" id="serie1">
-            <div class="checkbox-wrapper">
-              <label for="serie1">Serie 1</label><br>
-            </div>
-            <input class="escondido" type="checkbox" id="serie2">
-            <div class="checkbox-wrapper">
-              <label for="serie2">Serie 2</label><br>
-            </div>
-            <input class="escondido" type="checkbox" id="serie3">
-            <div class="checkbox-wrapper">
-              <label for="serie3">Serie 3</label><br>
-            </div>
-          </li>
-          <li class="tempo">
-            <p>Corrida</p><br>
-            <input class="escondido" type="checkbox" id="serie1">
-            <div class="checkbox-wrapper">
-              <label for="serie1">1 km</label><br>
-            </div>
-            <input class="escondido" type="checkbox" id="serie2">
-            <div class="checkbox-wrapper">
-              <label for="serie2">2 km</label><br>
-            </div>
-            <input class="escondido" type="checkbox" id="serie3">
-            <div class="checkbox-wrapper">
-              <label for="serie3">3 km</label><br>
-            </div>
-          </li>
-  
-        </ul>
+    <ul>
+      <li class="tempo">
+        <p>Flexões</p> <br>
+        <input class="escondido" type="checkbox" id="serie1">
+        <div class="checkbox-wrapper">
+          <label for="serie1">Serie 1</label><br>
+        </div>
+        <input class="escondido" type="checkbox" id="serie2">
+        <div class="checkbox-wrapper">
+          <label for="serie2">Serie 2</label><br>
+        </div>
+        <input class="escondido" type="checkbox" id="serie3">
+        <div class="checkbox-wrapper">
+          <label for="serie3">Serie 3</label><br>
+        </div>
+      </li>
+      <li class="tempo">
+        <p>Abdominais</p><br>
+        <input class="escondido" type="checkbox" id="serie12">
+        <div class="checkbox-wrapper">
+          <label for="serie12">Serie 1</label><br>
+        </div>
+        <input class="escondido" type="checkbox" id="serie22">
+        <div class="checkbox-wrapper">
+          <label for="serie22">Serie 2</label><br>
+        </div>
+        <input class="escondido" type="checkbox" id="serie32">
+        <div class="checkbox-wrapper">
+          <label for="serie32">Serie 3</label><br>
+        </div>
+      </li>
+      <li class="tempo">
+        <p>Agachamentos</p><br>
+        <input class="escondido" type="checkbox" id="serie13">
+        <div class="checkbox-wrapper">
+          <label for="serie13">Serie 1</label><br>
+        </div>
+        <input class="escondido" type="checkbox" id="serie23">
+        <div class="checkbox-wrapper">
+          <label for="serie23">Serie 2</label><br>
+        </div>
+        <input class="escondido" type="checkbox" id="serie33">
+        <div class="checkbox-wrapper">
+          <label for="serie33">Serie 3</label><br>
+        </div>
+      </li>
+      <li class="tempo">
+        <p>Corrida</p><br>
+        <input class="escondido" type="checkbox" id="serie14">
+        <div class="checkbox-wrapper">
+          <label for="serie14">1 km</label><br>
+        </div>
+        <input class="escondido" type="checkbox" id="serie24">
+        <div class="checkbox-wrapper">
+          <label for="serie24">2 km</label><br>
+        </div>
+        <input class="escondido" type="checkbox" id="serie34">
+        <div class="checkbox-wrapper">
+          <label for="serie34">3 km</label><br>
+        </div>
+      </li>
+    </ul>
+  </main>
 
 
 
-      <script src="./js/levelup.js"></script>
-      <script src="./js/cronometro.js"></script>
+  <script src="./js/script.js"></script>
+  <script src="./js/levelup.js"></script>
+  <script src="./js/cronometro.js"></script>
 </body>
 
 </html>
