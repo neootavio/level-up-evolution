@@ -176,3 +176,11 @@ input:checked + .checkbox-wrapper{
 .escondido{
   display: none;
 }
+
+.mostrar{
+  display: grid;
+}
+
+.comecar:checked{
+  display: grid;
+}
