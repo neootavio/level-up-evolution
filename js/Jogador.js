@@ -9,11 +9,12 @@ export class Jogador {
 
     }
 
-    
+    get nome(){
+        return this._nome;
+    }
 
-
-
-    
-
+    get level(){
+        return this._level;
+    }
 
 }
