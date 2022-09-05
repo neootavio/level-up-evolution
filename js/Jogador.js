@@ -24,16 +24,15 @@ export class Jogador {
 
     ganharXP(xp) {
         this._experiencia += xp;
+
+        if(this._experiencia > this._level + 3)
+        
         this.levelUp();
     }
 
-    levelUp() {
-       
-        if (this._experiencia > 20) {
+    levelUp(xp) {
 
             this._level++;
-
-        } 
 
     }
 }
