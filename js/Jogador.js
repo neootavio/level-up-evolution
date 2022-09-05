@@ -28,11 +28,12 @@ export class Jogador {
     }
 
     levelUp() {
-        if (this._experiencia === this._level + 3) {
+       
+        if (this._experiencia > 20) {
 
             this._level++;
 
-        }
+        } 
 
     }
 }
