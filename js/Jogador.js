@@ -2,7 +2,8 @@ export class Jogador {
 
     _nome;
     _level = 1;
-    _experiencia = 0;
+    _pontosXP = 0;
+    _condicao = 4;
 
     constructor(nome) {
 
@@ -22,17 +23,50 @@ export class Jogador {
         return this._level;
     }
 
-    ganharXP(xp) {
-        this._experiencia += xp;
+    calculaXP(xp) {
 
-        if(this._experiencia > this._level + 3)
-        
-        this.levelUp();
+        this._pontosXP += xp
+
+        if (this._pontosXP > this._condicao) {
+            //levelUp();
+            if(this._level < 5){
+                this._level++;
+                this._condicao += 4;
+    
+            } else if (this._level < 10) {
+                this._level++;
+                this._condicao += 5;
+            } else if (this._level < 30) {
+                this._level++;
+                this._condicao += 7;
+            } else {
+                this._level++;
+               this._condicao += 21;
+            }
+    
+            alert("Level up!");
+            xp = 0;
+        }
+    
     }
-
-    levelUp(xp) {
-
+    /*
+    levelUp() {
+       
+        if(this._level < 5){
             this._level++;
+            this._condicao += 4;
 
-    }
+        } else if (this._level < 10) {
+            this._level++;
+            this._condicao += 5;
+        } else if (this._level < 30) {
+            this._level++;
+            this._condicao += 7;
+        } else {
+            this._level++;
+           this._condicao += 21;
+        }
+
+        alert("Level up!");
+    }*/
 }
