@@ -1,7 +1,7 @@
 import { Jogador } from "./Jogador.js";
 
-let nomeTela = document.getElementById('nomeJogador');
-let levelTela = document.getElementById('levelJogador');
+let nomeTela = document.getElementById('player');
+let levelTela = document.getElementById('level');
 let botaoConcluir = document.getElementById('botaoConcluir');
 let barraProgresso = document.getElementById('barra-progresso');
 

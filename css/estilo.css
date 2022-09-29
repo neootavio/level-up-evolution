@@ -185,3 +185,22 @@ input:checked + .checkbox-wrapper{
   transition: 5s;
   display: block;
 }
+
+#barra-progresso{
+  color: #1d1f20;
+  width: 300px;
+  height: 50px;
+  border: 1px solid black;
+  background-image: linear-gradient(to right, red, red 0%, white 0%);
+  margin: auto;
+}
+
+.botao{
+  color: #1d1f20;
+}
+
+.cx-texto{
+  color: #1d1f20;
+  font-size: larger;
+  text-align: center;
+}
