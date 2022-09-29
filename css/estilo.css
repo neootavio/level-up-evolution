@@ -74,6 +74,7 @@ h1 {
 h2, h3, #btnCrono{
   text-align: center;
   box-sizing: border-box;
+  font-weight: bolder;
 }
 
 
@@ -101,7 +102,7 @@ ul li {
   display: grid;
   box-sizing: border-box;
   border: 1px solid #0a99e1;
-  color: #456BC7;
+  color: #fff;
   box-shadow: 0px 0px 15px #0a99e1, 0px 0px 1px #0a99e1 inset;
   text-shadow: 0px 0px #0a99e1, 0px 0px 3px #0a99e1;
   text-align: center;
@@ -162,11 +163,14 @@ a {
 
 input, .checkbox-wrapper{
   display: grid;
+  color: #fff;
 }
 
 input:checked + .checkbox-wrapper{
+  color: #456BC7;
+  text-shadow: 0px 0px #0a99e1, 0px 0px 10px #48a9d9;
   text-decoration: line-through;
-  color: rgba(255, 0, 0, 0.97);
+  text-decoration-color: #fff;
 }
 
 .redondo{
