@@ -19,7 +19,6 @@ function comecar() {
 }
 
 function concluir() {
-    alert("Parabéns, XP + 5");
 
     trocarTela();
 

@@ -203,4 +203,10 @@ input:checked + .checkbox-wrapper{
   color: #1d1f20;
   font-size: larger;
   text-align: center;
+  margin: auto;
+}
+
+#playerFoto{
+  margin: auto;
+  width: 18%;
 }

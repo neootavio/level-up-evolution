@@ -6,6 +6,11 @@ export class Jogador {
     _condicao = 4;
     _progresso = 0;
 
+    _tipoSanguineo = "";
+    _altura = 0;
+    _peso = 0;
+    _idade = 0;
+
     constructor(nome) {
 
         this._nome = nome;
@@ -20,12 +25,56 @@ export class Jogador {
         this._nome = nome;
     }
 
+    set tipoSanguineo(tipoSanguineo){
+        this._tipoSanguineo = tipoSanguineo;
+    }
+
+    get tipoSanguineo(){
+        return this._tipoSanguineo;
+    }
+
+    set altura(altura){
+        this._altura = altura;
+    }
+
+    get altura(){
+        return this._altura;
+    }
+
+    set peso(peso){
+        this._peso = peso;
+    }
+
+    get peso(){
+        return this._peso;
+    }
+
+    set idade(idade){
+        this._idade = idade;
+    }
+
+    get idade(){
+        return this._idade;
+    }
+
+    set level(level){
+        this._level = level;
+    }
+
     get level() {
         return this._level;
     }
 
+    set xp(xp){
+        this.pontosXP = xp;
+    }
+
     get xp(){
         return this._pontosXP;
+    }
+
+    set progresso(progresso){
+        this._progresso = progresso;
     }
 
     get progresso(){

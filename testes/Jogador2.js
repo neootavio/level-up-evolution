@@ -1,4 +1,4 @@
-export class Jogador {
+export class Jogador2 {
 
     _nome;
     _level = 1;
