@@ -25,13 +25,11 @@ function cadastraJogador() {
     
 
     nomeTela.innerText = nome.value;
-    levelTela.innerText = "Level - " + jogador.level;
+    levelTela.innerText = "Level - " + level;
 
     localStorage.jogador = JSON.stringify(jogador);
 
-    alert("Jogador cadastrado!")
+    alert("Jogador cadastrado!");
 
-    
-    
 
 }
