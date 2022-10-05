@@ -3,11 +3,11 @@ import { Jogador } from "./Jogador.js";
 let nomeTela = document.getElementById('nomeJogador');
 let levelTela = document.getElementById('levelJogador');
 let botaoCadastro = document.getElementById('botaoCadastro');
-let nome = document.getElementById('textoNome');
-let tipoSanguineo = document.getElementById('tipoSanguineo');
-let altura = document.getElementById('altura');
-let peso = document.getElementById('peso');
-let idade = document.getElementById('idade');
+let nome = document.getElementById('texto-nome');
+let tipoSanguineo = document.getElementById('texto-tipoSanguineo');
+let altura = document.getElementById('texto-altura');
+let peso = document.getElementById('texto-peso');
+let idade = document.getElementById('texto-idade');
 
 
 const jogador = new Jogador("novo");
@@ -17,17 +17,20 @@ botaoCadastro.onclick = cadastraJogador;
 
 function cadastraJogador() {
 
-    jogador.nome = nome.value;
-    jogador.tipoSanguineo = tipoSanguineo.value;
-    jogador.altura = altura.value;
-    jogador.peso = peso.value;
-    jogador.idade = idade.value;
+    jogador._nome = nome.value;
+    jogador._tipoSanguineo = tipoSanguineo.value;
+    jogador._altura = altura.value;
+    jogador._peso = peso.value;
+    jogador._idade = idade.value;
     
+    jogador._level = 100;
 
     nomeTela.innerText = nome.value;
-    levelTela.innerText = "Level - " + level;
+    levelTela.innerText = "Level - " + jogador._level;
 
     localStorage.jogador = JSON.stringify(jogador);
+
+
 
     alert("Jogador cadastrado!");
 
