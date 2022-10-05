@@ -5,6 +5,7 @@ export class Jogador2 {
     _pontosXP = 0;
     _condicao = 4;
     _progresso = 0;
+    _sobeNivelEm = this._condicao;
 
     constructor(nome) {
 
@@ -34,8 +35,9 @@ export class Jogador2 {
 
     calculaXP(xp) {
 
-        this._pontosXP += xp
-        this._progresso = (this._pontosXP / this._condicao) * 100;
+        
+        this._pontosXP += xp;
+        
         /*
         alert("condição: " + this._condicao + " xp");
         alert(this._pontosXP + " xp");
@@ -47,6 +49,11 @@ export class Jogador2 {
             this._progresso = 0;
         }
     
+    }
+
+    percentualBarra(){
+        
+        
     }
     
     levelUp() {

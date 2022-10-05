@@ -5,7 +5,7 @@ const altura = document.getElementById('altura');
 const peso = document.getElementById('peso');
 const idade = document.getElementById('idade');
 
-const jogador = JSON.parse(localStorage.jogador)
+const jogador = JSON.parse(localStorage.jogador);
 
 console.log(jogador);
 

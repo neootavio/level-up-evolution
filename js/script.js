@@ -4,6 +4,15 @@ let tela = document.getElementById('tela');
 
 let painel1 = document.getElementById('painel1');
 
+const jogador = JSON.parse(localStorage.jogador);
+console.log(jogador);
+
+const nomeJogador = document.getElementById('player');
+const levelJogador = document.getElementById('level'); 
+
+nomeJogador.innerText = jogador._nome;
+levelJogador.innerText = jogador._level;
+
 function alerta() {
 
     alert("Caso recuse seu nível não subirá!");

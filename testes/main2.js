@@ -1,7 +1,7 @@
 import { Jogador2 } from "./Jogador2.js";
 
-let nomeTela = document.getElementById('player');
-let levelTela = document.getElementById('level');
+let nomeTela = document.getElementById('nomeJogador');
+let levelTela = document.getElementById('levelJogador');
 let botaoConcluir = document.getElementById('botaoConcluir');
 let barraProgresso = document.getElementById('barra-progresso');
 
@@ -11,7 +11,9 @@ let botaoNome = document.getElementById('botaoNome');
 
 const jogador = new Jogador2("novo");
 
-const progresso = jogador.progresso;
+var progresso = jogador._progresso;
+
+var condicao = jogador._condicao;
 
 
 botaoNome.onclick = cadastraJogador;
@@ -21,7 +23,7 @@ botaoConcluir.onclick = concluirQuest;
 function cadastraJogador() {
 
     jogador.nome = nome.value;
-    console.log(jogador);
+    console.log(nome.value);
 
     nomeTela.innerText = nome.value;
     levelTela.innerText = "Level - " + jogador.level;
@@ -29,18 +31,23 @@ function cadastraJogador() {
 }
 
 function concluirQuest() {
-    
+
     jogador.calculaXP(1);
     console.log(jogador);
-    console.log("progresso "+ jogador.progresso);
     levelTela.innerText = "Level - " + jogador.level;
-    atualizaBarra(jogador.progresso);
+    atualizaBarra();
 
-    
+
 }
 
-function atualizaBarra(p) {
+function atualizaBarra() {
 
-    barraProgresso.style.backgroundImage = `linear-gradient(to right, red, red ${p}%, white ${p}%`;
+    let xp_barra = jogador._pontosXP;
+    progresso = (xp_barra * 100) / condicao;
+
+    barraProgresso.style.backgroundImage = `linear-gradient(to right, red, red ${progresso}%, white ${progresso}%`;
+
+    progresso = 0;
+    xp_barra = 0;
 
 }

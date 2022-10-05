@@ -22,8 +22,6 @@ function cadastraJogador() {
     jogador._altura = altura.value;
     jogador._peso = peso.value;
     jogador._idade = idade.value;
-    
-    jogador._level = 100;
 
     nomeTela.innerText = nome.value;
     levelTela.innerText = "Level - " + jogador._level;
