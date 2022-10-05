@@ -15,6 +15,8 @@ var progresso = jogador._progresso;
 
 var condicao = jogador._condicao;
 
+console.log(condicao, progresso);
+
 
 botaoNome.onclick = cadastraJogador;
 
@@ -35,19 +37,19 @@ function concluirQuest() {
     jogador.calculaXP(1);
     console.log(jogador);
     levelTela.innerText = "Level - " + jogador.level;
-    atualizaBarra();
+    atualizaBarra(jogador._progresso);
 
 
 }
 
-function atualizaBarra() {
+function atualizaBarra(p) {
 
-    let xp_barra = jogador._pontosXP;
-    progresso = (xp_barra * 100) / condicao;
+    barraProgresso.style.backgroundImage = `linear-gradient(to right, red, red ${p}%, white ${p}% `;
 
-    barraProgresso.style.backgroundImage = `linear-gradient(to right, red, red ${progresso}%, white ${progresso}%`;
+    if (p > 100) {
 
-    progresso = 0;
-    xp_barra = 0;
+        barraProgresso.style.backgroundImage = `linear-gradient(to right, red, red ${0}%, white ${0}%`;
 
+    }
 }
+
