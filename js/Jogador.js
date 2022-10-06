@@ -83,7 +83,7 @@ export class Jogador {
 
     calculaXP(xp) {
 
-        this._pontosXP += xp
+        this._pontosXP += xp;
         this._progresso = (this._pontosXP / this._condicao) * 100;
         /*
         alert("condição: " + this._condicao + " xp");

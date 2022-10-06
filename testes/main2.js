@@ -9,7 +9,7 @@ let nome = document.getElementById('textoNome');
 
 let botaoNome = document.getElementById('botaoNome');
 
-const jogador = new Jogador2("novo");
+const jogador = new Jogador2("novo"); 
 
 var progresso = jogador._progresso;
 

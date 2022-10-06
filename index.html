@@ -25,19 +25,22 @@
       <img id="playerFoto" width="50px" src="assets/miles.jpg" alt="avatar"><br>
       <span id="player">Player</span><br>
       <span>Level:<strong id="level"> </strong></span>
-    </a> 
+      <div id="barra-progresso">
+        XP
+      </div>
+    </a>
   </div>
 
   <div class="tempo" id="painel1">
-    <button id="botao1" onclick="comecar()">Começar</button>
+    <button id="botao1">Começar</button>
 
-    <button id="botao3" onclick="concluirQuest()">Teste</button>
+    <button id="botao3">Teste</button>
   </div>
 
 
 
-<!--mudar aqui a class para escondido-->
-  <main id="tela" class="mostrar">
+  <!--mudar aqui a class para escondido-->
+  <main id="tela" class="escondido">
     <div class="tempo">
       <p>
         <span class="minutos">00</span>:
@@ -51,7 +54,10 @@
       </div>
     </div>
     <div class="tempo">
-      <iframe class="liquest" width="560" height="315" src="https://www.youtube.com/embed/pICyXP25Nao" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="liquest" width="560" height="315" src="https://www.youtube.com/embed/pICyXP25Nao"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
     </div>
     <ul>
       <li class="tempo">
@@ -117,7 +123,13 @@
     </ul>
   </main>
 
-  <script type="module" src="js/Jogador.js"></script>
+  <footer>
+    <div class="tempo" id="painel2">
+      <button id="botao2">Concluído</button>
+    </div>
+  </footer>
+
+  <script src="./js/Jogador.js"></script>
   <script type="module" src="./js/script.js"></script>
   <script src="./js/cronometro.js"></script>
 </body>

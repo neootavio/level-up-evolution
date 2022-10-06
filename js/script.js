@@ -4,21 +4,29 @@ let barraProgresso = document.getElementById('barra-progresso');
 let menu1 = document.getElementById('menu1');
 let tela = document.getElementById('tela');
 let painel1 = document.getElementById('painel1');
+let painel2 = document.getElementById('painel2');
 let botaoComecar = document.getElementById('botao1');
 let botaoConcluir = document.getElementById('botao2');
-let botao3 = document.getElementById('botao3');
+let botaoTeste = document.getElementById('botao3');
+var nomeJogador = document.getElementById('player');
+var levelJogador = document.getElementById('level'); 
 
-botao3.onclick = concluirQuest;
+var jogador = new Jogador("novo"); 
+
+jogador = JSON.parse(localStorage.jogador);
+
+var progresso = jogador._progresso;
+
+var condicao = jogador._condicao;
 
 
 botaoComecar.onclick = comecar;
 
-const jogador = JSON.parse(localStorage.jogador);
+botaoTeste.onclick = concluirQuest;
+
+botaoConcluir.onclick = concluirQuest;
 
 console.log(jogador);
-
-const nomeJogador = document.getElementById('player');
-const levelJogador = document.getElementById('level'); 
 
 nomeJogador.innerText = jogador._nome;
 levelJogador.innerText = jogador._level;
@@ -27,7 +35,7 @@ var progresso = jogador._progresso;
 
 var condicao = jogador._condicao;
 
-console.log(condicao, progresso);
+console.log("Condição: " + condicao, "Progresso: " + progresso);
 
 function alerta() {
 
@@ -39,7 +47,21 @@ function comecar() {
 
     voltarTela();
 
-    painel1.innerHTML = '<button id="botao2" onclick="concluirQuest()">Concluir</button>'
+    painel2.innerHTML = '<button id="botao2">Concluir</button>'
+
+}
+
+function concluirQuest() { 
+    console.log("Executou");
+    console.log(jogador);
+    trocarTela();
+    
+    painel1.innerHTML = '<button id="botao1"">Começar</button>'
+    
+    jogador.calculaXP(1);
+    
+    levelJogador.innerText = jogador._level;
+    atualizaBarra(jogador._progresso);
 
 }
 
@@ -62,20 +84,6 @@ function voltarTela() {
     menu1.classList.remove('esconder');
 
     menu1.classList.add('mostrar');
-}
-
-function concluirQuest() {
-
-    trocarTela();
-
-    painel1.innerHTML = '<button id="botao1" onclick="comecar()">Começar</button>'
-
-    jogador.calculaXP(1);
-    console.log(jogador);
-    levelTela.innerText = "Level - " + jogador.level;
-    atualizaBarra(jogador._progresso);
-
-
 }
 
 function atualizaBarra(p) {
