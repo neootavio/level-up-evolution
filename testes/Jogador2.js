@@ -33,15 +33,15 @@ export class Jogador2 {
     }
 
     calculaXP(xp) {
-
+        console.log(this._progresso);
         this._pontosXP += xp;
-
-        this._progresso = (this._pontosXP / this._condicao) * 100;
+        
+        this._progresso = (this._pontosXP/ this._condicao) * 100;
+        
 
         if (this._pontosXP > this._condicao) {
             this.levelUp();  
             this._progresso = 0;
-            
         }
     
     }

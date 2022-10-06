@@ -1,4 +1,4 @@
-import { Jogador } from "../js/Jogador.js";
+import { Jogador } from "./Jogador.js";
 
 let barraProgresso = document.getElementById('barra-progresso');
 let menu1 = document.getElementById('menu1');
@@ -11,9 +11,13 @@ let botaoTeste = document.getElementById('botao3');
 var nomeJogador = document.getElementById('player');
 var levelJogador = document.getElementById('level'); 
 
-var jogador = new Jogador("novo"); 
+var jogador = new Jogador("local"); 
 
-jogador = JSON.parse(localStorage.jogador);
+console.log(localStorage.getItem(0));
+
+
+
+console.log(jogador);
 
 var progresso = jogador._progresso;
 
@@ -26,8 +30,6 @@ botaoTeste.onclick = concluirQuest;
 
 botaoConcluir.onclick = concluirQuest;
 
-console.log(jogador);
-
 nomeJogador.innerText = jogador._nome;
 levelJogador.innerText = jogador._level;
 
@@ -35,7 +37,7 @@ var progresso = jogador._progresso;
 
 var condicao = jogador._condicao;
 
-console.log("Condição: " + condicao, "Progresso: " + progresso);
+
 
 function alerta() {
 
@@ -96,3 +98,6 @@ function atualizaBarra(p) {
 
     }
 }
+
+
+console.log("Condição: " + condicao, "Progresso: " + progresso);

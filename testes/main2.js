@@ -7,11 +7,11 @@ let barraProgresso = document.getElementById('barra-progresso');
 
 let nome = document.getElementById('textoNome');
 
-let botaoNome = document.getElementById('botaoNome');
+let botaoNome = document.getElementById('botaoNome'); 
 
 const jogador = new Jogador2("novo"); 
 
-var progresso = jogador._progresso;
+var progresso = jogador._progresso; 
 
 var condicao = jogador._condicao;
 

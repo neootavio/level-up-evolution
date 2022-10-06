@@ -5,7 +5,6 @@ export class Jogador {
     _pontosXP = 0;
     _condicao = 4;
     _progresso = 0;
-
     _tipoSanguineo = "";
     _altura = 0;
     _peso = 0;
@@ -116,5 +115,9 @@ export class Jogador {
         }
 
         alert("Level up!");
+    }
+
+    apresentar(){
+        alert("Oi eu sou " + this._nome);
     }
 }
