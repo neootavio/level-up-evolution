@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando o localStorage</title>
+</head>
+<body>
+
+    <h2>Nome</h2>
+    <h3>Level</h3>
+
+    <script>
+        const txtNome = document.querySelector('h2');
+        const txtLevel = document.querySelector('h3');
+
+        localStorage.setItem('x', 10);
+        localStorage.x = 20;
+
+        var nome = 'x';
+        localStorage[nome] = 40;
+        
+        localStorage.y = 50;
+
+        localStorage.z = parseInt(localStorage.x) + parseInt(localStorage.y);
+
+        localStorage.teste = +localStorage.z + +localStorage.x;
+
+        for(i = 0; i < localStorage.length; i++){
+            //mostra as chaves
+            console.log(localStorage.key(i));
+
+            //mostra os conteúdos
+            console.log(localStorage[localStorage.key(i)]);
+        }
+
+        var jogador = {
+            nome: 'Otávio',
+            level: 1
+        }
+
+        localStorage.jogador = JSON.stringify(jogador);
+
+        const jogador1 = JSON.parse(localStorage.jogador);
+
+        txtNome.innerText = jogador1.nome;
+        txtLevel.innerText = jogador1.level;
+
+
+
+        console.log(localStorage)
+        //localStorage.clear();
+
+    </script>
+</body>
+</html>

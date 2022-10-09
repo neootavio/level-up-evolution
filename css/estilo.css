@@ -212,3 +212,12 @@ input:checked + .checkbox-wrapper{
   margin: auto;
   width: 18%;
 }
+
+#painel1{
+  display: inline-block;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}

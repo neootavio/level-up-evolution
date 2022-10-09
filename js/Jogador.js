@@ -24,39 +24,39 @@ export class Jogador {
         this._nome = nome;
     }
 
-    set tipoSanguineo(tipoSanguineo){
+    set tipoSanguineo(tipoSanguineo) {
         this._tipoSanguineo = tipoSanguineo;
     }
 
-    get tipoSanguineo(){
+    get tipoSanguineo() {
         return this._tipoSanguineo;
     }
 
-    set altura(altura){
+    set altura(altura) {
         this._altura = altura;
     }
 
-    get altura(){
+    get altura() {
         return this._altura;
     }
 
-    set peso(peso){
+    set peso(peso) {
         this._peso = peso;
     }
 
-    get peso(){
+    get peso() {
         return this._peso;
     }
 
-    set idade(idade){
+    set idade(idade) {
         this._idade = idade;
     }
 
-    get idade(){
+    get idade() {
         return this._idade;
     }
 
-    set level(level){
+    set level(level) {
         this._level = level;
     }
 
@@ -64,42 +64,52 @@ export class Jogador {
         return this._level;
     }
 
-    set xp(xp){
+    set xp(xp) {
         this.pontosXP = xp;
     }
 
-    get xp(){
+    get xp() {
         return this._pontosXP;
     }
 
-    set progresso(progresso){
+    set progresso(progresso) {
         this._progresso = progresso;
     }
 
-    get progresso(){
+    get progresso() {
         return this._progresso;
     }
 
-    calculaXP(xp) {
+    ganhaXP(xp) {
 
+        //contador geral de xp
         this._pontosXP += xp;
-        this._progresso = (this._pontosXP / this._condicao) * 100;
-        /*
-        alert("condição: " + this._condicao + " xp");
-        alert(this._pontosXP + " xp");
-        alert("progresso " + this._progresso + "%");
-        */
 
+        let barra = this._condicao;
+        console.log("barra = " + barra);
+        
+
+        let preenchimento = this._pontosXP;
+        console.log("Preenchimento = " + preenchimento);
+        
+ 
+        this._progresso = (preenchimento/barra) * 100;
+        console.log("Progresso = " + this._progresso);
+
+
+        //verifica se subiu de nivel
         if (this._pontosXP > this._condicao) {
-            this.levelUp();  
-            this._progresso = 0;
+            this.levelUp();
+            this.progresso = 0;
         }
-    
+
+
+
     }
-    
+
     levelUp() {
-       
-        if(this._level < 5){
+
+        if (this._level < 5) {
             this._level++;
             this._condicao += 4;
 
@@ -111,13 +121,22 @@ export class Jogador {
             this._condicao += 7;
         } else {
             this._level++;
-           this._condicao += 21;
+            this._condicao += 21;
         }
 
         alert("Level up!");
     }
 
-    apresentar(){
+    apresentar() {
         alert("Oi eu sou " + this._nome);
     }
+
+    calculaProgresso(xp, condicao) {
+
+        this._progresso = (xp * 100) / condicao;
+
+        return this._progresso;
+
+    }
+
 }
