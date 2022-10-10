@@ -16,6 +16,7 @@ const jogador = new Jogador("novo");
 
 botaoCadastro.onclick = cadastraJogador;
 botaoPreencher.onclick = preencher;
+botaoLimpar.onclick = limpar;
 
 
 function cadastraJogador() {
@@ -57,5 +58,9 @@ function preencher(){
 
     alert("Jogador " + localStorage.nome + " cadastrado!");
     
+}
+
+function limpar() {
+    localStorage.clear();
 }
 
