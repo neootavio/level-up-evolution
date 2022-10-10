@@ -4,11 +4,9 @@ let painel1 = document.getElementById('painel1');
 let painel2 = document.getElementById('painel2');
 let botaoComecar = document.getElementById('botao1');
 let botaoConcluir = document.getElementById('botao2');
-let botaoTeste = document.getElementById('botao3');
+
 
 botaoComecar.onclick = comecar;
-
-botaoTeste.onclick = concluirQuest;
 
 botaoConcluir.onclick = concluirQuest;
 

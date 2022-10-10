@@ -2,11 +2,14 @@ import { Jogador } from "../js/Jogador.js";
 
 let barraProgresso = document.getElementById('barra-progresso');
 var nomeJogador = document.getElementById('player');
-var levelJogador = document.getElementById('level'); 
+var levelJogador = document.getElementById('level');
+let botao2 = document.getElementById('botao2');
+let botao4 = document.getElementById('botao4');
 let botao3 = document.getElementById('botao3');
 let botao5 = document.getElementById('botao5');
-let botao4 = document.getElementById('botao4');
 
+
+botao2.onclick = concluir;
 
 var jogador1 = new Jogador("nome");
 
@@ -25,22 +28,18 @@ jogador1._idade = parseInt(localStorage.idade);
 nomeJogador.innerText = jogador1.nome;
 levelJogador.innerText = jogador1.level;
 
-console.log(jogador1);
+//botao3.onclick = concluir;
+
+//botao4.onclick = preencher;
+
+//botao5.onclick = limpar;
 
 
-
-botao4.onclick = preencher;
-
-botao3.onclick = concluir;
-
-botao5.onclick = limpar;
-
-
-function concluir(){
+function concluir() {
 
     jogador1.ganhaXP(1);
     console.log(`Pontos XP: ${jogador1._pontosXP}`);
-    
+
 
     //manipulação do DOM
     level.innerText = jogador1._level;
@@ -52,11 +51,32 @@ function concluir(){
     localStorage.condicao = jogador1._condicao;
 
     //atualiza a barra
-    atualizaBarra(jogador1._progresso);
+    atualizaBarra(1);
 }
 
 
 function atualizaBarra(p) {
+
+    if(jogador1._level == 1 ){
+
+        calculaProgresso(jogador1._xpNivel, 4);
+
+    } else 
+
+    if (jogador1._level <= 5) {
+
+        calculaProgresso(jogador1._xpNivel, 4);
+
+
+    } else if (jogador1._level <= 10) {
+        calculaProgresso(jogador1._xpNivel, 5);
+    } else if (jogador1._level <= 30) {
+        calculaProgresso(jogador1._xpNivel, 7);
+    } else {
+        calculaProgresso(jogador1._xpNivel, 21);
+    }
+
+    p = jogador1._progresso;
 
     barraProgresso.style.backgroundImage = `linear-gradient(to right, red, red ${p}%, white ${p}% `;
 
@@ -67,7 +87,14 @@ function atualizaBarra(p) {
     }
 }
 
-function preencher(){
+function calculaProgresso(xpNivel, barra) {
+
+    jogador1._progresso = (xpNivel/barra) * 100;
+    return jogador1._progresso;
+
+}
+
+function preencher() {
 
     localStorage.nome = "Otávio";
     localStorage.level = 1;
@@ -77,10 +104,9 @@ function preencher(){
     localStorage.idade = 38;
     localStorage.pontosXP = 0;
     localStorage.condicao = 4;
-    localStorage.progresso = jogador1.calculaProgresso(0, 4);
-    
+    localStorage.xpNivel = 0;
 }
- 
-function limpar(){
+
+function limpar() {
     localStorage.clear();
 }

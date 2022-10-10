@@ -214,7 +214,7 @@ input:checked + .checkbox-wrapper{
 }
 
 #painel1{
-  display: inline-block;
+  display: block;
   margin: auto;
   justify-content: center;
   align-items: center;

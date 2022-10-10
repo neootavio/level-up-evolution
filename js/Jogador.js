@@ -9,6 +9,7 @@ export class Jogador {
     _altura = 0;
     _peso = 0;
     _idade = 0;
+    _xpNivel = 0;
 
     constructor(nome) {
 
@@ -84,26 +85,13 @@ export class Jogador {
 
         //contador geral de xp
         this._pontosXP += xp;
-
-        let barra = this._condicao;
-        console.log("barra = " + barra);
-        
-
-        let preenchimento = this._pontosXP;
-        console.log("Preenchimento = " + preenchimento);
-        
- 
-        this._progresso = (preenchimento/barra) * 100;
-        console.log("Progresso = " + this._progresso);
-
+        this._xpNivel += xp;
 
         //verifica se subiu de nivel
         if (this._pontosXP > this._condicao) {
             this.levelUp();
-            this.progresso = 0;
+            this._xpNivel = 1;
         }
-
-
 
     }
 
@@ -129,14 +117,6 @@ export class Jogador {
 
     apresentar() {
         alert("Oi eu sou " + this._nome);
-    }
-
-    calculaProgresso(xp, condicao) {
-
-        this._progresso = (xp * 100) / condicao;
-
-        return this._progresso;
-
     }
 
 }
