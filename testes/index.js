@@ -3,13 +3,11 @@ import { Jogador } from "../js/Jogador.js";
 let barraProgresso = document.getElementById('barra-progresso');
 var nomeJogador = document.getElementById('player');
 var levelJogador = document.getElementById('level');
-let botao2 = document.getElementById('botao2');
-let botao4 = document.getElementById('botao4');
-let botao3 = document.getElementById('botao3');
-let botao5 = document.getElementById('botao5');
-
-
-botao2.onclick = concluir;
+//let botao2 = document.getElementById('botao2');
+//let botao4 = document.getElementById('botao4');
+//let botao3 = document.getElementById('botao3');
+//let botao5 = document.getElementById('botao5');
+let botao6 = document.getElementById('botao6');
 
 var jogador1 = new Jogador("nome");
 
@@ -27,6 +25,9 @@ jogador1._idade = parseInt(localStorage.idade);
 
 nomeJogador.innerText = jogador1.nome;
 levelJogador.innerText = jogador1.level;
+
+botao2.onclick = concluir;
+botao6.onclick = concluir;
 
 //botao3.onclick = concluir;
 

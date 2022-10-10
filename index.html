@@ -33,6 +33,7 @@
 
   <div class="tempo" id="painel1">
     <button id="botao1">Começar</button>
+    <button id="botao2">Concluir</button>
     <!--
     <button id="botao4">Preencher</button>
     
@@ -54,9 +55,9 @@
         <span class="milissegundos">00</span>
       </p>
       <div id="btnCrono">
-        <button onclick="iniciar()" class="iniciar">Iniciar</button>
-        <button onclick="parar()" class="parar">Parar</button>
-        <button onclick="resetar()" class="resetar">Resetar</button>
+        <button id="startcrono" class="iniciar">Iniciar</button>
+        <button id="stopcrono" class="parar">Parar</button>
+        <button id="resetcrono" class="resetar">Resetar</button>
       </div>
     </div>
     <div class="tempo">
@@ -131,13 +132,12 @@
 
   <footer>
     <div class="tempo" id="painel2">
-      <button id="botao2">Concluído</button>
+      
     </div>
   </footer>
 
-  <script type="module" src="./js/index.js"></script>
-  <script src="./js/script.js"></script>
-  <script src="./js/cronometro.js"></script>
+  <script type="module" src="./js/script.js"></script>
+
 </body>
 
 </html>
